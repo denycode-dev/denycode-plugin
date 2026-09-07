@@ -1,0 +1,14 @@
+{
+  "name": "denycode-plugin",
+  "version": "0.1.0",
+  "description": "Antigravity plugin for denycode",
+  "author": {
+    "name": "Deni Irawan Nugraha"
+  },
+  "license": "MIT",
+  "keywords": [
+    "antigravity",
+    "antigravity-plugin",
+    "denycode"
+  ]
+}

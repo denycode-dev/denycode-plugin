@@ -12,3 +12,12 @@ Thumbs.db
 .env
 .env.local
 *.local
+
+# Archive and temporary analysis
+skills_archive/
+*_summary.json
+taxonomy_classified.json
+classification_raw.json
+grouped_skills.json
+curation_plan.json
+

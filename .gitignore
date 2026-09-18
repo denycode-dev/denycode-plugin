@@ -20,4 +20,5 @@ taxonomy_classified.json
 classification_raw.json
 grouped_skills.json
 curation_plan.json
-
+# IDE & Editor
+.vscode/

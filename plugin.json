@@ -1,14 +1,5 @@
 {
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
   "name": "denycode-plugin",
-  "version": "0.1.0",
-  "description": "Antigravity plugin for denycode",
-  "author": {
-    "name": "Deni Irawan Nugraha"
-  },
-  "license": "MIT",
-  "keywords": [
-    "antigravity",
-    "antigravity-plugin",
-    "denycode"
-  ]
+  "description": "Antigravity plugin for denycode"
 }

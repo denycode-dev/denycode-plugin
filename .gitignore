@@ -14,7 +14,6 @@ Thumbs.db
 *.local
 
 # Archive and temporary analysis
-skills_archive/
 *_summary.json
 taxonomy_classified.json
 classification_raw.json

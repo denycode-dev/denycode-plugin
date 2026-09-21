@@ -2,38 +2,38 @@
   "mcpServers": {
     "context-mode": {
       "command": "context-mode"
-    },
-    "sonarqube": {
-      "$typeName": "exa.cascade_plugins_pb.CascadePluginCommandTemplate",
-      "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "-e",
-        "SONARQUBE_TOKEN",
-        "-e",
-        "SONARQUBE_ORG",
-        "-e",
-        "SONARQUBE_URL",
-        "mcp/sonarqube",
-        "stdio"
-      ],
-      "env": {
-        "SONARQUBE_ORG": "${SONARQUBE_ORG}",
-        "SONARQUBE_TOKEN": "${SONARQUBE_TOKEN}",
-        "SONARQUBE_URL": "${SONARQUBE_URL}"
-      }
-    },
-    "ripwire": {
-      "command": "wsl.exe",
-      "args": ["/home/denycode/.local/bin/ripwire", "--mcp"]
-    },
-    "context7": {
-      "serverUrl": "https://mcp.context7.com/mcp",
-      "headers": {
-        "Authorization": "Bearer ${CONTEXT7_API_KEY}"
-      }
     }
+    // "sonarqube": {
+    //   "$typeName": "exa.cascade_plugins_pb.CascadePluginCommandTemplate",
+    //   "command": "docker",
+    //   "args": [
+    //     "run",
+    //     "-i",
+    //     "--rm",
+    //     "-e",
+    //     "SONARQUBE_TOKEN",
+    //     "-e",
+    //     "SONARQUBE_ORG",
+    //     "-e",
+    //     "SONARQUBE_URL",
+    //     "mcp/sonarqube",
+    //     "stdio"
+    //   ],
+    //   "env": {
+    //     "SONARQUBE_ORG": "${SONARQUBE_ORG}",
+    //     "SONARQUBE_TOKEN": "${SONARQUBE_TOKEN}",
+    //     "SONARQUBE_URL": "${SONARQUBE_URL}"
+    //   }
+    // },
+    // "ripwire": {
+    //   "command": "wsl.exe",
+    //   "args": ["/home/denycode/.local/bin/ripwire", "--mcp"]
+    // },
+    // "context7": {
+    //   "serverUrl": "https://mcp.context7.com/mcp",
+    //   "headers": {
+    //     "Authorization": "Bearer ${CONTEXT7_API_KEY}"
+    //   }
+    // }
   }
 }

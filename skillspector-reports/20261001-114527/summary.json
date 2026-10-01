@@ -1,0 +1,50 @@
+[
+  {
+    "Batch": "batch-001",
+    "Status": "failed",
+    "ExitCode": 2,
+    "SkillCount": 10,
+    "Skills": "api-design-principles, api-security-best-practices, architect-review, architecture-patterns, audit-context-building, audit-skills, auth-implementation-patterns, clean-code, context-mode, ctx-doctor",
+    "Report": ".\\skillspector-reports\\20261001-114527\\reports\\batch-001.json"
+  },
+  {
+    "Batch": "batch-002",
+    "Status": "failed",
+    "ExitCode": 2,
+    "SkillCount": 10,
+    "Skills": "ctx-index, ctx-insight, ctx-purge, ctx-search, ctx-stats, ctx-upgrade, debugger, design-md, docker-expert, drizzle-orm-expert",
+    "Report": ".\\skillspector-reports\\20261001-114527\\reports\\batch-002.json"
+  },
+  {
+    "Batch": "batch-003",
+    "Status": "failed",
+    "ExitCode": 2,
+    "SkillCount": 10,
+    "Skills": "e2e-testing, error-handling-patterns, favicon, financial-engineering-principles, find-bugs, fixing-motion-performance, frontend-design, go-concurrency-patterns, golang-pro, graphql",
+    "Report": ".\\skillspector-reports\\20261001-114527\\reports\\batch-003.json"
+  },
+  {
+    "Batch": "batch-004",
+    "Status": "failed",
+    "ExitCode": 2,
+    "SkillCount": 10,
+    "Skills": "i18n-localization, iconsax-library, k6-load-testing, laravel-expert, mcp-builder, mermaid-expert, nextjs-app-router-patterns, nextjs-best-practices, nodejs-best-practices, nosql-expert",
+    "Report": ".\\skillspector-reports\\20261001-114527\\reports\\batch-004.json"
+  },
+  {
+    "Batch": "batch-005",
+    "Status": "failed",
+    "ExitCode": 2,
+    "SkillCount": 10,
+    "Skills": "postgres-best-practices, postgresql-optimization, product-design, programmatic-seo, react-best-practices, react-component-performance, risk-manager, security-auditor, senior-frontend, seo-audit",
+    "Report": ".\\skillspector-reports\\20261001-114527\\reports\\batch-005.json"
+  },
+  {
+    "Batch": "batch-006",
+    "Status": "failed",
+    "ExitCode": 2,
+    "SkillCount": 9,
+    "Skills": "shadcn, sveltekit, typescript-expert, ui-ux-designer, ui-ux-pro-max, ux-writing, wcag-audit-patterns, web-performance-optimization, writing-plans",
+    "Report": ".\\skillspector-reports\\20261001-114527\\reports\\batch-006.json"
+  }
+]

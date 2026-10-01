@@ -1,0 +1,3599 @@
+{
+  "multi_skill": true,
+  "skill_count": 5,
+  "max_risk_score": 100,
+  "execution_successful": false,
+  "risk_recommendation": "DO_NOT_INSTALL",
+  "analysis_completeness": {
+    "is_complete": false,
+    "execution_successful": false,
+    "status": "failed",
+    "coverage_percent": 0.0,
+    "fully_inspected_files": 0,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 5,
+    "total_files": 5,
+    "limitations": [],
+    "scope": "recursive_skills"
+  },
+  "skills_scanned": 5,
+  "skills_omitted": 0,
+  "public_finding_records": 25,
+  "report_characters": 104768,
+  "transitive_finding_count": 0,
+  "transitive_sources": [],
+  "skills": [
+    {
+      "name": "react-component-performance",
+      "path": "react-component-performance",
+      "risk_score": 25,
+      "risk_severity": "MEDIUM",
+      "finding_count": 1,
+      "execution_successful": false,
+      "transitive_finding_count": 0,
+      "transitive_sources": [],
+      "skill": {
+        "name": "react-component-performance",
+        "source": "C:\\Users\\App Jun Fro Dev SAU\\.gemini\\config\\plugins\\denycode-plugin\\skillspector-reports\\20261001-114632\\_staging\\batch-010\\react-component-performance",
+        "scanned_at": "2026-10-01T04:50:15.053155+00:00"
+      },
+      "risk_assessment": {
+        "score": 25,
+        "severity": "MEDIUM",
+        "recommendation": "CAUTION",
+        "max_issue_severity": "HIGH"
+      },
+      "components": [
+        {
+          "path": "SKILL.md",
+          "type": "markdown",
+          "lines": 135,
+          "executable": false,
+          "size_bytes": 4898,
+          "source_url": null,
+          "source_identity": null,
+          "source_digest": null
+        },
+        {
+          "path": "agents/openai.yaml",
+          "type": "yaml",
+          "lines": 4,
+          "executable": false,
+          "size_bytes": 242,
+          "source_url": null,
+          "source_identity": null,
+          "source_digest": null
+        },
+        {
+          "path": "references/examples.md",
+          "type": "markdown",
+          "lines": 88,
+          "executable": false,
+          "size_bytes": 2469,
+          "source_url": null,
+          "source_identity": null,
+          "source_digest": null
+        }
+      ],
+      "structured_summaries": [],
+      "issues": [
+        {
+          "id": "AE1",
+          "finding_id": "finding-fd31052c24724c5cb553bc366f15ce68",
+          "category": "analysis-evasion",
+          "pattern": null,
+          "severity": "HIGH",
+          "confidence": 1.0,
+          "location": {
+            "file": "SKILL.md",
+            "start_line": 135,
+            "end_line": null
+          },
+          "finding": "references/examples.md (failed)",
+          "explanation": "Referenced artifact was not completely inspected",
+          "remediation": "Make the referenced artifact locally available and fully analyzable, or remove the reference.",
+          "code_snippet": "Load `references/examples.md` when the user wants a concrete refactor example.",
+          "intent": null,
+          "tags": [
+            "coverage",
+            "reference",
+            "target-disposition:failed"
+          ],
+          "evidence": {},
+          "match_fingerprint": "5a1b09833faf23d3d513ce3970f15a79f21ec600f4e9df42535a703afc6e335d",
+          "occurrences": [
+            {
+              "file": "SKILL.md",
+              "start_line": 135,
+              "end_line": null
+            }
+          ]
+        }
+      ],
+      "suppressed_count": 0,
+      "suppressed": [],
+      "metadata": {
+        "has_executable_scripts": false,
+        "skillspector_version": "2.11.2",
+        "llm_requested": true,
+        "llm_available": true,
+        "meta_analysis_applied": false,
+        "inference_usage": [],
+        "filtering_mode": "heuristic",
+        "llm_calls_attempted": 3,
+        "llm_calls_succeeded": 0,
+        "llm_degraded": true,
+        "llm_error": "LLM analysis was requested but 3 of 3 LLM call(s) failed; results reflect static analysis only for the affected batch(es)."
+      },
+      "analysis_completeness": {
+        "total_components": 3,
+        "scanned_components": 0,
+        "coverage_percent": 0.0,
+        "is_complete": false,
+        "status": "failed",
+        "execution_successful": false,
+        "fully_inspected_files": 0,
+        "partially_inspected_files": 3,
+        "entirely_uninspected_files": 0,
+        "ledger_exceptions": [
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "SKILL.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "semantic_developer_intent",
+              "semantic_quality_policy",
+              "semantic_security_discovery"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "partial",
+            "phase": "semantic_runtime",
+            "reason_code": "semantic_runtime_incomplete",
+            "message": "Requested semantic analysis did not produce complete per-source runtime telemetry.",
+            "path": "SKILL.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": false
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "agents/openai.yaml",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "semantic_developer_intent",
+              "semantic_quality_policy",
+              "semantic_security_discovery"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "references/examples.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "semantic_developer_intent",
+              "semantic_quality_policy",
+              "semantic_security_discovery"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          }
+        ],
+        "scope_exclusions": [],
+        "analyzer_statuses": [
+          {
+            "analyzer_id": "artifact_integrity",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "behavioral_ast",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "behavioral_taint_tracking",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "bundled_execution_surface",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "mcp_least_privilege",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "mcp_rug_pull",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "mcp_tool_poisoning",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "meta_analyzer",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "reference_coverage",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "semantic_developer_intent",
+            "status": "failed",
+            "planned_work": 3,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 3,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "semantic_quality_policy",
+            "status": "failed",
+            "planned_work": 3,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 3,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "semantic_security_discovery",
+            "status": "failed",
+            "planned_work": 3,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 3,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_agent_snooping",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_anti_refusal",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_data_exfiltration",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_deserialization",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_excessive_agency",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_harmful_content",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_memory_poisoning",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_output_handling",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_privilege_escalation",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_prompt_injection",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_rogue_agent",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_ssrf",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_supply_chain",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_system_prompt_leakage",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_tool_misuse",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_yara",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          }
+        ],
+        "references": [
+          {
+            "source_path": "SKILL.md",
+            "line": 135,
+            "column": 7,
+            "evidence": "Load `references/examples.md` when the user wants a concrete refactor example.",
+            "target_path": "references/examples.md",
+            "status": "resolved",
+            "disposition": "analyzed"
+          }
+        ],
+        "limitations": [
+          "Analyzer semantic_developer_intent status: failed.",
+          "Analyzer semantic_quality_policy status: failed.",
+          "Analyzer semantic_security_discovery status: failed."
+        ],
+        "findings_before_filtering": 1,
+        "findings_after_filtering": 1
+      }
+    },
+    {
+      "name": "risk-manager",
+      "path": "risk-manager",
+      "risk_score": 0,
+      "risk_severity": "LOW",
+      "finding_count": 0,
+      "execution_successful": false,
+      "transitive_finding_count": 0,
+      "transitive_sources": [],
+      "skill": {
+        "name": "risk-manager",
+        "source": "C:\\Users\\App Jun Fro Dev SAU\\.gemini\\config\\plugins\\denycode-plugin\\skillspector-reports\\20261001-114632\\_staging\\batch-010\\risk-manager",
+        "scanned_at": "2026-10-01T04:50:15.543413+00:00"
+      },
+      "risk_assessment": {
+        "score": 0,
+        "severity": "LOW",
+        "recommendation": "CAUTION",
+        "max_issue_severity": "NONE"
+      },
+      "components": [
+        {
+          "path": "SKILL.md",
+          "type": "markdown",
+          "lines": 60,
+          "executable": false,
+          "size_bytes": 1930,
+          "source_url": null,
+          "source_identity": null,
+          "source_digest": null
+        }
+      ],
+      "structured_summaries": [],
+      "issues": [],
+      "suppressed_count": 0,
+      "suppressed": [],
+      "metadata": {
+        "has_executable_scripts": false,
+        "skillspector_version": "2.11.2",
+        "llm_requested": true,
+        "llm_available": true,
+        "meta_analysis_applied": false,
+        "inference_usage": [],
+        "filtering_mode": "heuristic",
+        "llm_calls_attempted": 3,
+        "llm_calls_succeeded": 0,
+        "llm_degraded": true,
+        "llm_error": "LLM analysis was requested but 3 of 3 LLM call(s) failed; results reflect static analysis only for the affected batch(es)."
+      },
+      "analysis_completeness": {
+        "total_components": 1,
+        "scanned_components": 0,
+        "coverage_percent": 0.0,
+        "is_complete": false,
+        "status": "failed",
+        "execution_successful": false,
+        "fully_inspected_files": 0,
+        "partially_inspected_files": 1,
+        "entirely_uninspected_files": 0,
+        "ledger_exceptions": [
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "SKILL.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "semantic_developer_intent",
+              "semantic_quality_policy",
+              "semantic_security_discovery"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "partial",
+            "phase": "semantic_runtime",
+            "reason_code": "semantic_runtime_incomplete",
+            "message": "Requested semantic analysis did not produce complete per-source runtime telemetry.",
+            "path": "SKILL.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": false
+          },
+          {
+            "outcome": "partial",
+            "phase": "reference_resolution",
+            "reason_code": "reference_missing",
+            "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+            "path": "SKILL.md",
+            "start_line": 24,
+            "end_line": 24,
+            "fatal": false
+          }
+        ],
+        "scope_exclusions": [],
+        "analyzer_statuses": [
+          {
+            "analyzer_id": "artifact_integrity",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "behavioral_ast",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "behavioral_taint_tracking",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "bundled_execution_surface",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "mcp_least_privilege",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "mcp_rug_pull",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "mcp_tool_poisoning",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "meta_analyzer",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "semantic_developer_intent",
+            "status": "failed",
+            "planned_work": 1,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 1,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "semantic_quality_policy",
+            "status": "failed",
+            "planned_work": 1,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 1,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "semantic_security_discovery",
+            "status": "failed",
+            "planned_work": 1,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 1,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_agent_snooping",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_anti_refusal",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_data_exfiltration",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_deserialization",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_excessive_agency",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_harmful_content",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_memory_poisoning",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_output_handling",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_privilege_escalation",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_prompt_injection",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_rogue_agent",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_ssrf",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_supply_chain",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_system_prompt_leakage",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_tool_misuse",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_yara",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          }
+        ],
+        "references": [
+          {
+            "source_path": "SKILL.md",
+            "line": 24,
+            "column": 44,
+            "evidence": "- If detailed examples are required, open `resources/implementation-playbook.md`.",
+            "target_path": null,
+            "status": "missing",
+            "disposition": "partial"
+          }
+        ],
+        "limitations": [
+          "Analyzer semantic_developer_intent status: failed.",
+          "Analyzer semantic_quality_policy status: failed.",
+          "Analyzer semantic_security_discovery status: failed."
+        ],
+        "findings_before_filtering": 0,
+        "findings_after_filtering": 0
+      }
+    },
+    {
+      "name": "security-auditor",
+      "path": "security-auditor",
+      "risk_score": 0,
+      "risk_severity": "LOW",
+      "finding_count": 0,
+      "execution_successful": false,
+      "transitive_finding_count": 0,
+      "transitive_sources": [],
+      "skill": {
+        "name": "security-auditor",
+        "source": "C:\\Users\\App Jun Fro Dev SAU\\.gemini\\config\\plugins\\denycode-plugin\\skillspector-reports\\20261001-114632\\_staging\\batch-010\\security-auditor",
+        "scanned_at": "2026-10-01T04:50:16.089443+00:00"
+      },
+      "risk_assessment": {
+        "score": 0,
+        "severity": "LOW",
+        "recommendation": "CAUTION",
+        "max_issue_severity": "NONE"
+      },
+      "components": [
+        {
+          "path": "SKILL.md",
+          "type": "markdown",
+          "lines": 165,
+          "executable": false,
+          "size_bytes": 10228,
+          "source_url": null,
+          "source_identity": null,
+          "source_digest": null
+        }
+      ],
+      "structured_summaries": [],
+      "issues": [],
+      "suppressed_count": 0,
+      "suppressed": [],
+      "metadata": {
+        "has_executable_scripts": false,
+        "skillspector_version": "2.11.2",
+        "llm_requested": true,
+        "llm_available": true,
+        "meta_analysis_applied": false,
+        "inference_usage": [],
+        "filtering_mode": "heuristic",
+        "llm_calls_attempted": 3,
+        "llm_calls_succeeded": 0,
+        "llm_degraded": true,
+        "llm_error": "LLM analysis was requested but 3 of 3 LLM call(s) failed; results reflect static analysis only for the affected batch(es)."
+      },
+      "analysis_completeness": {
+        "total_components": 1,
+        "scanned_components": 0,
+        "coverage_percent": 0.0,
+        "is_complete": false,
+        "status": "failed",
+        "execution_successful": false,
+        "fully_inspected_files": 0,
+        "partially_inspected_files": 1,
+        "entirely_uninspected_files": 0,
+        "ledger_exceptions": [
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "SKILL.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "semantic_developer_intent",
+              "semantic_quality_policy",
+              "semantic_security_discovery"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "partial",
+            "phase": "semantic_runtime",
+            "reason_code": "semantic_runtime_incomplete",
+            "message": "Requested semantic analysis did not produce complete per-source runtime telemetry.",
+            "path": "SKILL.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": false
+          },
+          {
+            "outcome": "partial",
+            "phase": "reference_resolution",
+            "reason_code": "reference_missing",
+            "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+            "path": "SKILL.md",
+            "start_line": 50,
+            "end_line": 50,
+            "fatal": false
+          }
+        ],
+        "scope_exclusions": [],
+        "analyzer_statuses": [
+          {
+            "analyzer_id": "artifact_integrity",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "behavioral_ast",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "behavioral_taint_tracking",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "bundled_execution_surface",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "mcp_least_privilege",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "mcp_rug_pull",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "mcp_tool_poisoning",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "meta_analyzer",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "semantic_developer_intent",
+            "status": "failed",
+            "planned_work": 1,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 1,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "semantic_quality_policy",
+            "status": "failed",
+            "planned_work": 1,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 1,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "semantic_security_discovery",
+            "status": "failed",
+            "planned_work": 1,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 1,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_agent_snooping",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_anti_refusal",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_data_exfiltration",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_deserialization",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_excessive_agency",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_harmful_content",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_memory_poisoning",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_output_handling",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_privilege_escalation",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_prompt_injection",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_rogue_agent",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_ssrf",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_supply_chain",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_system_prompt_leakage",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_tool_misuse",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_yara",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          }
+        ],
+        "references": [
+          {
+            "source_path": "SKILL.md",
+            "line": 50,
+            "column": 33,
+            "evidence": "- **Identity protocols**: OAuth 2.0/2.1, OpenID Connect, SAML 2.0, WebAuthn, FIDO2",
+            "target_path": null,
+            "status": "missing",
+            "disposition": "partial"
+          }
+        ],
+        "limitations": [
+          "Analyzer semantic_developer_intent status: failed.",
+          "Analyzer semantic_quality_policy status: failed.",
+          "Analyzer semantic_security_discovery status: failed."
+        ],
+        "findings_before_filtering": 0,
+        "findings_after_filtering": 0
+      }
+    },
+    {
+      "name": "senior-frontend",
+      "path": "senior-frontend",
+      "risk_score": 100,
+      "risk_severity": "CRITICAL",
+      "finding_count": 12,
+      "execution_successful": false,
+      "transitive_finding_count": 0,
+      "transitive_sources": [],
+      "skill": {
+        "name": "senior-frontend",
+        "source": "C:\\Users\\App Jun Fro Dev SAU\\.gemini\\config\\plugins\\denycode-plugin\\skillspector-reports\\20261001-114632\\_staging\\batch-010\\senior-frontend",
+        "scanned_at": "2026-10-01T04:50:24.502172+00:00"
+      },
+      "risk_assessment": {
+        "score": 100,
+        "severity": "CRITICAL",
+        "recommendation": "DO_NOT_INSTALL",
+        "max_issue_severity": "HIGH"
+      },
+      "components": [
+        {
+          "path": "SKILL.md",
+          "type": "markdown",
+          "lines": 490,
+          "executable": false,
+          "size_bytes": 12656,
+          "source_url": null,
+          "source_identity": null,
+          "source_digest": null
+        },
+        {
+          "path": "references/frontend_best_practices.md",
+          "type": "markdown",
+          "lines": 806,
+          "executable": false,
+          "size_bytes": 20589,
+          "source_url": null,
+          "source_identity": null,
+          "source_digest": null
+        },
+        {
+          "path": "references/nextjs_optimization_guide.md",
+          "type": "markdown",
+          "lines": 724,
+          "executable": false,
+          "size_bytes": 15847,
+          "source_url": null,
+          "source_identity": null,
+          "source_digest": null
+        },
+        {
+          "path": "references/react_patterns.md",
+          "type": "markdown",
+          "lines": 746,
+          "executable": false,
+          "size_bytes": 18087,
+          "source_url": null,
+          "source_identity": null,
+          "source_digest": null
+        },
+        {
+          "path": "scripts/bundle_analyzer.py",
+          "type": "python",
+          "lines": 407,
+          "executable": true,
+          "size_bytes": 13746,
+          "source_url": null,
+          "source_identity": null,
+          "source_digest": null
+        },
+        {
+          "path": "scripts/component_generator.py",
+          "type": "python",
+          "lines": 329,
+          "executable": true,
+          "size_bytes": 9013,
+          "source_url": null,
+          "source_identity": null,
+          "source_digest": null
+        },
+        {
+          "path": "scripts/frontend_scaffolder.py",
+          "type": "python",
+          "lines": 1005,
+          "executable": true,
+          "size_bytes": 28986,
+          "source_url": null,
+          "source_identity": null,
+          "source_digest": null
+        }
+      ],
+      "structured_summaries": [],
+      "issues": [
+        {
+          "id": "AE1",
+          "finding_id": "finding-c385b75171e843c899954d30bda926c6",
+          "category": "analysis-evasion",
+          "pattern": null,
+          "severity": "HIGH",
+          "confidence": 1.0,
+          "location": {
+            "file": "SKILL.md",
+            "start_line": 40,
+            "end_line": null
+          },
+          "finding": "scripts/frontend_scaffolder.py (failed)",
+          "explanation": "Referenced artifact was not completely inspected",
+          "remediation": "Make the referenced artifact locally available and fully analyzable, or remove the reference.",
+          "code_snippet": "python scripts/frontend_scaffolder.py my-app --template nextjs",
+          "intent": null,
+          "tags": [
+            "coverage",
+            "reference",
+            "target-disposition:failed"
+          ],
+          "evidence": {},
+          "match_fingerprint": "73c768acc36350ee46bda0fcd57c50968e060573da81bf142fdbef3cf6e896f4",
+          "occurrences": [
+            {
+              "file": "SKILL.md",
+              "start_line": 40,
+              "end_line": null
+            }
+          ]
+        },
+        {
+          "id": "AE1",
+          "finding_id": "finding-c385b75171e843c899954d30bda926c6",
+          "category": "analysis-evasion",
+          "pattern": null,
+          "severity": "HIGH",
+          "confidence": 1.0,
+          "location": {
+            "file": "SKILL.md",
+            "start_line": 46,
+            "end_line": null
+          },
+          "finding": "scripts/frontend_scaffolder.py (failed)",
+          "explanation": "Referenced artifact was not completely inspected",
+          "remediation": "Make the referenced artifact locally available and fully analyzable, or remove the reference.",
+          "code_snippet": "python scripts/frontend_scaffolder.py my-app --template nextjs",
+          "intent": null,
+          "tags": [
+            "coverage",
+            "reference",
+            "target-disposition:failed"
+          ],
+          "evidence": {},
+          "match_fingerprint": "73c768acc36350ee46bda0fcd57c50968e060573da81bf142fdbef3cf6e896f4",
+          "occurrences": [
+            {
+              "file": "SKILL.md",
+              "start_line": 46,
+              "end_line": null
+            }
+          ]
+        },
+        {
+          "id": "AE1",
+          "finding_id": "finding-7c15cabc543943f5a3572825ed6a6265",
+          "category": "analysis-evasion",
+          "pattern": null,
+          "severity": "HIGH",
+          "confidence": 1.0,
+          "location": {
+            "file": "SKILL.md",
+            "start_line": 103,
+            "end_line": null
+          },
+          "finding": "scripts/component_generator.py (failed)",
+          "explanation": "Referenced artifact was not completely inspected",
+          "remediation": "Make the referenced artifact locally available and fully analyzable, or remove the reference.",
+          "code_snippet": "python scripts/component_generator.py Button --dir src/components/ui",
+          "intent": null,
+          "tags": [
+            "coverage",
+            "reference",
+            "target-disposition:failed"
+          ],
+          "evidence": {},
+          "match_fingerprint": "48b19b5a9c1601320aa65dc9a65495b108ffd804335cff6b32b441c0231b427a",
+          "occurrences": [
+            {
+              "file": "SKILL.md",
+              "start_line": 103,
+              "end_line": null
+            }
+          ]
+        },
+        {
+          "id": "AE1",
+          "finding_id": "finding-7c15cabc543943f5a3572825ed6a6265",
+          "category": "analysis-evasion",
+          "pattern": null,
+          "severity": "HIGH",
+          "confidence": 1.0,
+          "location": {
+            "file": "SKILL.md",
+            "start_line": 109,
+            "end_line": null
+          },
+          "finding": "scripts/component_generator.py (failed)",
+          "explanation": "Referenced artifact was not completely inspected",
+          "remediation": "Make the referenced artifact locally available and fully analyzable, or remove the reference.",
+          "code_snippet": "python scripts/component_generator.py Button --dir src/components/ui",
+          "intent": null,
+          "tags": [
+            "coverage",
+            "reference",
+            "target-disposition:failed"
+          ],
+          "evidence": {},
+          "match_fingerprint": "48b19b5a9c1601320aa65dc9a65495b108ffd804335cff6b32b441c0231b427a",
+          "occurrences": [
+            {
+              "file": "SKILL.md",
+              "start_line": 109,
+              "end_line": null
+            }
+          ]
+        },
+        {
+          "id": "AE1",
+          "finding_id": "finding-7c15cabc543943f5a3572825ed6a6265",
+          "category": "analysis-evasion",
+          "pattern": null,
+          "severity": "HIGH",
+          "confidence": 1.0,
+          "location": {
+            "file": "SKILL.md",
+            "start_line": 115,
+            "end_line": null
+          },
+          "finding": "scripts/component_generator.py (failed)",
+          "explanation": "Referenced artifact was not completely inspected",
+          "remediation": "Make the referenced artifact locally available and fully analyzable, or remove the reference.",
+          "code_snippet": "python scripts/component_generator.py Button --dir src/components/ui",
+          "intent": null,
+          "tags": [
+            "coverage",
+            "reference",
+            "target-disposition:failed"
+          ],
+          "evidence": {},
+          "match_fingerprint": "48b19b5a9c1601320aa65dc9a65495b108ffd804335cff6b32b441c0231b427a",
+          "occurrences": [
+            {
+              "file": "SKILL.md",
+              "start_line": 115,
+              "end_line": null
+            }
+          ]
+        },
+        {
+          "id": "AE1",
+          "finding_id": "finding-7c15cabc543943f5a3572825ed6a6265",
+          "category": "analysis-evasion",
+          "pattern": null,
+          "severity": "HIGH",
+          "confidence": 1.0,
+          "location": {
+            "file": "SKILL.md",
+            "start_line": 120,
+            "end_line": null
+          },
+          "finding": "scripts/component_generator.py (failed)",
+          "explanation": "Referenced artifact was not completely inspected",
+          "remediation": "Make the referenced artifact locally available and fully analyzable, or remove the reference.",
+          "code_snippet": "python scripts/component_generator.py Button --dir src/components/ui",
+          "intent": null,
+          "tags": [
+            "coverage",
+            "reference",
+            "target-disposition:failed"
+          ],
+          "evidence": {},
+          "match_fingerprint": "48b19b5a9c1601320aa65dc9a65495b108ffd804335cff6b32b441c0231b427a",
+          "occurrences": [
+            {
+              "file": "SKILL.md",
+              "start_line": 120,
+              "end_line": null
+            }
+          ]
+        },
+        {
+          "id": "AE1",
+          "finding_id": "finding-c9b17032896c4b47ad85cba4dfac94fc",
+          "category": "analysis-evasion",
+          "pattern": null,
+          "severity": "HIGH",
+          "confidence": 1.0,
+          "location": {
+            "file": "SKILL.md",
+            "start_line": 164,
+            "end_line": null
+          },
+          "finding": "scripts/bundle_analyzer.py (failed)",
+          "explanation": "Referenced artifact was not completely inspected",
+          "remediation": "Make the referenced artifact locally available and fully analyzable, or remove the reference.",
+          "code_snippet": "python scripts/bundle_analyzer.py /path/to/project",
+          "intent": null,
+          "tags": [
+            "coverage",
+            "reference",
+            "target-disposition:failed"
+          ],
+          "evidence": {},
+          "match_fingerprint": "8bbb56309f391b9c53b6fcb661dec9db3396d07980b60325e05c226273f5cccd",
+          "occurrences": [
+            {
+              "file": "SKILL.md",
+              "start_line": 164,
+              "end_line": null
+            }
+          ]
+        },
+        {
+          "id": "AE1",
+          "finding_id": "finding-c9b17032896c4b47ad85cba4dfac94fc",
+          "category": "analysis-evasion",
+          "pattern": null,
+          "severity": "HIGH",
+          "confidence": 1.0,
+          "location": {
+            "file": "SKILL.md",
+            "start_line": 184,
+            "end_line": null
+          },
+          "finding": "scripts/bundle_analyzer.py (failed)",
+          "explanation": "Referenced artifact was not completely inspected",
+          "remediation": "Make the referenced artifact locally available and fully analyzable, or remove the reference.",
+          "code_snippet": "python scripts/bundle_analyzer.py /path/to/project",
+          "intent": null,
+          "tags": [
+            "coverage",
+            "reference",
+            "target-disposition:failed"
+          ],
+          "evidence": {},
+          "match_fingerprint": "8bbb56309f391b9c53b6fcb661dec9db3396d07980b60325e05c226273f5cccd",
+          "occurrences": [
+            {
+              "file": "SKILL.md",
+              "start_line": 184,
+              "end_line": null
+            }
+          ]
+        },
+        {
+          "id": "AE1",
+          "finding_id": "finding-2c020387339d4444b93d1c37e39bcd96",
+          "category": "analysis-evasion",
+          "pattern": null,
+          "severity": "HIGH",
+          "confidence": 1.0,
+          "location": {
+            "file": "SKILL.md",
+            "start_line": 213,
+            "end_line": null
+          },
+          "finding": "references/react_patterns.md (failed)",
+          "explanation": "Referenced artifact was not completely inspected",
+          "remediation": "Make the referenced artifact locally available and fully analyzable, or remove the reference.",
+          "code_snippet": "Reference: `references/react_patterns.md`",
+          "intent": null,
+          "tags": [
+            "coverage",
+            "reference",
+            "target-disposition:failed"
+          ],
+          "evidence": {},
+          "match_fingerprint": "c45c77bd5f8278c1bfdb64df057d2bcbf11ba37eea98b35bb6d2bb9d57c404b9",
+          "occurrences": [
+            {
+              "file": "SKILL.md",
+              "start_line": 213,
+              "end_line": null
+            }
+          ]
+        },
+        {
+          "id": "AE1",
+          "finding_id": "finding-2c020387339d4444b93d1c37e39bcd96",
+          "category": "analysis-evasion",
+          "pattern": null,
+          "severity": "HIGH",
+          "confidence": 1.0,
+          "location": {
+            "file": "SKILL.md",
+            "start_line": 488,
+            "end_line": null
+          },
+          "finding": "references/react_patterns.md (failed)",
+          "explanation": "Referenced artifact was not completely inspected",
+          "remediation": "Make the referenced artifact locally available and fully analyzable, or remove the reference.",
+          "code_snippet": "Reference: `references/react_patterns.md`",
+          "intent": null,
+          "tags": [
+            "coverage",
+            "reference",
+            "target-disposition:failed"
+          ],
+          "evidence": {},
+          "match_fingerprint": "c45c77bd5f8278c1bfdb64df057d2bcbf11ba37eea98b35bb6d2bb9d57c404b9",
+          "occurrences": [
+            {
+              "file": "SKILL.md",
+              "start_line": 488,
+              "end_line": null
+            }
+          ]
+        },
+        {
+          "id": "AE1",
+          "finding_id": "finding-5d7d02f4d5154502ba19404cbe3f5e0d",
+          "category": "analysis-evasion",
+          "pattern": null,
+          "severity": "HIGH",
+          "confidence": 1.0,
+          "location": {
+            "file": "SKILL.md",
+            "start_line": 295,
+            "end_line": null
+          },
+          "finding": "references/nextjs_optimization_guide.md (failed)",
+          "explanation": "Referenced artifact was not completely inspected",
+          "remediation": "Make the referenced artifact locally available and fully analyzable, or remove the reference.",
+          "code_snippet": "Reference: `references/nextjs_optimization_guide.md`",
+          "intent": null,
+          "tags": [
+            "coverage",
+            "reference",
+            "target-disposition:failed"
+          ],
+          "evidence": {},
+          "match_fingerprint": "78d3d9062cfcfac843f97890bc2d85c0dc6c36ac844552dac2b50d63cdc1e175",
+          "occurrences": [
+            {
+              "file": "SKILL.md",
+              "start_line": 295,
+              "end_line": null
+            }
+          ]
+        },
+        {
+          "id": "AE1",
+          "finding_id": "finding-5d7d02f4d5154502ba19404cbe3f5e0d",
+          "category": "analysis-evasion",
+          "pattern": null,
+          "severity": "HIGH",
+          "confidence": 1.0,
+          "location": {
+            "file": "SKILL.md",
+            "start_line": 489,
+            "end_line": null
+          },
+          "finding": "references/nextjs_optimization_guide.md (failed)",
+          "explanation": "Referenced artifact was not completely inspected",
+          "remediation": "Make the referenced artifact locally available and fully analyzable, or remove the reference.",
+          "code_snippet": "Reference: `references/nextjs_optimization_guide.md`",
+          "intent": null,
+          "tags": [
+            "coverage",
+            "reference",
+            "target-disposition:failed"
+          ],
+          "evidence": {},
+          "match_fingerprint": "78d3d9062cfcfac843f97890bc2d85c0dc6c36ac844552dac2b50d63cdc1e175",
+          "occurrences": [
+            {
+              "file": "SKILL.md",
+              "start_line": 489,
+              "end_line": null
+            }
+          ]
+        },
+        {
+          "id": "AE1",
+          "finding_id": "finding-460a1c21681f4533b359622dd9c82cc8",
+          "category": "analysis-evasion",
+          "pattern": null,
+          "severity": "HIGH",
+          "confidence": 1.0,
+          "location": {
+            "file": "SKILL.md",
+            "start_line": 379,
+            "end_line": null
+          },
+          "finding": "references/frontend_best_practices.md (failed)",
+          "explanation": "Referenced artifact was not completely inspected",
+          "remediation": "Make the referenced artifact locally available and fully analyzable, or remove the reference.",
+          "code_snippet": "Reference: `references/frontend_best_practices.md`",
+          "intent": null,
+          "tags": [
+            "coverage",
+            "reference",
+            "target-disposition:failed"
+          ],
+          "evidence": {},
+          "match_fingerprint": "15c63cf87bd45ddde8b162cfe905eaa453a346fb43f2ebfa487cbe05509eed30",
+          "occurrences": [
+            {
+              "file": "SKILL.md",
+              "start_line": 379,
+              "end_line": null
+            }
+          ]
+        },
+        {
+          "id": "AE1",
+          "finding_id": "finding-460a1c21681f4533b359622dd9c82cc8",
+          "category": "analysis-evasion",
+          "pattern": null,
+          "severity": "HIGH",
+          "confidence": 1.0,
+          "location": {
+            "file": "SKILL.md",
+            "start_line": 490,
+            "end_line": null
+          },
+          "finding": "references/frontend_best_practices.md (failed)",
+          "explanation": "Referenced artifact was not completely inspected",
+          "remediation": "Make the referenced artifact locally available and fully analyzable, or remove the reference.",
+          "code_snippet": "Reference: `references/frontend_best_practices.md`",
+          "intent": null,
+          "tags": [
+            "coverage",
+            "reference",
+            "target-disposition:failed"
+          ],
+          "evidence": {},
+          "match_fingerprint": "15c63cf87bd45ddde8b162cfe905eaa453a346fb43f2ebfa487cbe05509eed30",
+          "occurrences": [
+            {
+              "file": "SKILL.md",
+              "start_line": 490,
+              "end_line": null
+            }
+          ]
+        },
+        {
+          "id": "OH1",
+          "finding_id": "finding-42f9a0e3904b48eb92eaba96322cd391",
+          "category": "Output Handling",
+          "pattern": "Unvalidated Output Injection",
+          "severity": "HIGH",
+          "confidence": 0.65,
+          "location": {
+            "file": "references/frontend_best_practices.md",
+            "start_line": 748,
+            "end_line": null,
+            "start_column": 14
+          },
+          "finding": "dangerouslySetInnerHTML={",
+          "explanation": "Model output is used without validation or sanitization. Unvalidated output injected into downstream contexts (SQL, shell, HTML) enables injection attacks and arbitrary code execution.",
+          "remediation": "Validate and sanitize all model output before using it in downstream contexts. Use parameterized queries for SQL, shell quoting for commands, and HTML encoding for web output.",
+          "code_snippet": "    ALLOWED_ATTR: ['href'],\n  });\n\n  return <div dangerouslySetInnerHTML={{ __html: sanitized }} />;\n}\n```\n",
+          "intent": null,
+          "tags": [
+            "Output Handling"
+          ],
+          "evidence": {},
+          "match_fingerprint": "152a270c69e5f498026be5430f75d09c53e612d4c86635345fe7e35d93b38ee0",
+          "occurrences": [
+            {
+              "file": "references/frontend_best_practices.md",
+              "start_line": 748,
+              "end_line": null,
+              "start_column": 14
+            }
+          ]
+        },
+        {
+          "id": "PE3",
+          "finding_id": "finding-4161ed84494d4314a5d649cc456a7c3f",
+          "category": "Privilege Escalation",
+          "pattern": "Credential Access",
+          "severity": "HIGH",
+          "confidence": 0.6,
+          "location": {
+            "file": "scripts/frontend_scaffolder.py",
+            "start_line": 798,
+            "end_line": null,
+            "start_column": 0
+          },
+          "finding": ".env\r",
+          "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+          "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+          "code_snippet": "build/\n\n# Environment\n.env\n.env.local\n.env.*.local\n",
+          "intent": null,
+          "tags": [
+            "Privilege Escalation"
+          ],
+          "evidence": {},
+          "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+          "occurrences": [
+            {
+              "file": "scripts/frontend_scaffolder.py",
+              "start_line": 798,
+              "end_line": null,
+              "start_column": 0
+            }
+          ]
+        },
+        {
+          "id": "PE3",
+          "finding_id": "finding-351f52cd68414773a3221845a9c4643d",
+          "category": "Privilege Escalation",
+          "pattern": "Credential Access",
+          "severity": "HIGH",
+          "confidence": 0.6,
+          "location": {
+            "file": "scripts/frontend_scaffolder.py",
+            "start_line": 799,
+            "end_line": null,
+            "start_column": 0
+          },
+          "finding": ".env.local\r",
+          "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+          "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+          "code_snippet": "\n# Environment\n.env\n.env.local\n.env.*.local\n\n# IDE",
+          "intent": null,
+          "tags": [
+            "Privilege Escalation"
+          ],
+          "evidence": {},
+          "match_fingerprint": "021f7ffa4122cf8ed26ecae08a0a46ff9aa27fee40f717ab4c3bff5f82c6550e",
+          "occurrences": [
+            {
+              "file": "scripts/frontend_scaffolder.py",
+              "start_line": 799,
+              "end_line": null,
+              "start_column": 0
+            }
+          ]
+        },
+        {
+          "id": "LP3",
+          "finding_id": "finding-e1d6066075b84766bc3120cb8f8ab3d9",
+          "category": "MCP Least Privilege",
+          "pattern": null,
+          "severity": "MEDIUM",
+          "confidence": 0.7,
+          "location": {
+            "file": "SKILL.md",
+            "start_line": 1,
+            "end_line": null
+          },
+          "finding": null,
+          "explanation": "Without declared permissions the skill's intent is opaque and cannot be validated.",
+          "remediation": "Declare the skill's tool scope: for Claude Code / Agent Skills SKILL.md, list the tools the skill may invoke in the 'allowed-tools' frontmatter field; for MCP server manifests, add a 'permissions' list naming the required capabilities.",
+          "code_snippet": null,
+          "intent": null,
+          "tags": [
+            "ASI02"
+          ],
+          "evidence": {},
+          "match_fingerprint": null,
+          "occurrences": [
+            {
+              "file": "SKILL.md",
+              "start_line": 1,
+              "end_line": null
+            }
+          ]
+        },
+        {
+          "id": "E1",
+          "finding_id": "finding-167f4a3ec3454fae8879544b3aa6d156",
+          "category": "Data Exfiltration",
+          "pattern": "External Transmission",
+          "severity": "MEDIUM",
+          "confidence": 0.5,
+          "location": {
+            "file": "references/frontend_best_practices.md",
+            "start_line": 798,
+            "end_line": null,
+            "start_column": 32
+          },
+          "finding": "https://api.example.com/",
+          "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+          "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+          "code_snippet": "// Never include secrets in client code - use server-side API routes\n// app/api/data/route.ts\nexport async function GET() {\n  const response = await fetch('https://api.example.com/data', {\n    headers: {\n      'Authorization': `Bearer ${process.env.API_SECRET}`, // Server-side only\n    },",
+          "intent": null,
+          "tags": [
+            "Data Exfiltration"
+          ],
+          "evidence": {},
+          "match_fingerprint": "88f1946300c8ae45d5ea7e81f2b6d4309a13082e928b6f7d1215d273945a1431",
+          "occurrences": [
+            {
+              "file": "references/frontend_best_practices.md",
+              "start_line": 798,
+              "end_line": null,
+              "start_column": 32
+            }
+          ]
+        },
+        {
+          "id": "E1",
+          "finding_id": "finding-167f4a3ec3454fae8879544b3aa6d156",
+          "category": "Data Exfiltration",
+          "pattern": "External Transmission",
+          "severity": "MEDIUM",
+          "confidence": 0.5,
+          "location": {
+            "file": "references/nextjs_optimization_guide.md",
+            "start_line": 374,
+            "end_line": null,
+            "start_column": 32
+          },
+          "finding": "https://api.example.com/",
+          "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+          "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+          "code_snippet": "// Never include secrets in client code - use server-side API routes\n// app/api/data/route.ts\nexport async function GET() {\n  const response = await fetch('https://api.example.com/data', {\n    headers: {\n      'Authorization': `Bearer ${process.env.API_SECRET}`, // Server-side only\n    },",
+          "intent": null,
+          "tags": [
+            "Data Exfiltration"
+          ],
+          "evidence": {},
+          "match_fingerprint": "88f1946300c8ae45d5ea7e81f2b6d4309a13082e928b6f7d1215d273945a1431",
+          "occurrences": [
+            {
+              "file": "references/nextjs_optimization_guide.md",
+              "start_line": 374,
+              "end_line": null,
+              "start_column": 32
+            }
+          ]
+        },
+        {
+          "id": "E1",
+          "finding_id": "finding-167f4a3ec3454fae8879544b3aa6d156",
+          "category": "Data Exfiltration",
+          "pattern": "External Transmission",
+          "severity": "MEDIUM",
+          "confidence": 0.5,
+          "location": {
+            "file": "references/nextjs_optimization_guide.md",
+            "start_line": 377,
+            "end_line": null,
+            "start_column": 32
+          },
+          "finding": "https://api.example.com/",
+          "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+          "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+          "code_snippet": "// Never include secrets in client code - use server-side API routes\n// app/api/data/route.ts\nexport async function GET() {\n  const response = await fetch('https://api.example.com/data', {\n    headers: {\n      'Authorization': `Bearer ${process.env.API_SECRET}`, // Server-side only\n    },",
+          "intent": null,
+          "tags": [
+            "Data Exfiltration"
+          ],
+          "evidence": {},
+          "match_fingerprint": "88f1946300c8ae45d5ea7e81f2b6d4309a13082e928b6f7d1215d273945a1431",
+          "occurrences": [
+            {
+              "file": "references/nextjs_optimization_guide.md",
+              "start_line": 377,
+              "end_line": null,
+              "start_column": 32
+            }
+          ]
+        },
+        {
+          "id": "E1",
+          "finding_id": "finding-167f4a3ec3454fae8879544b3aa6d156",
+          "category": "Data Exfiltration",
+          "pattern": "External Transmission",
+          "severity": "MEDIUM",
+          "confidence": 0.5,
+          "location": {
+            "file": "references/nextjs_optimization_guide.md",
+            "start_line": 380,
+            "end_line": null,
+            "start_column": 32
+          },
+          "finding": "https://api.example.com/",
+          "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+          "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+          "code_snippet": "// Never include secrets in client code - use server-side API routes\n// app/api/data/route.ts\nexport async function GET() {\n  const response = await fetch('https://api.example.com/data', {\n    headers: {\n      'Authorization': `Bearer ${process.env.API_SECRET}`, // Server-side only\n    },",
+          "intent": null,
+          "tags": [
+            "Data Exfiltration"
+          ],
+          "evidence": {},
+          "match_fingerprint": "88f1946300c8ae45d5ea7e81f2b6d4309a13082e928b6f7d1215d273945a1431",
+          "occurrences": [
+            {
+              "file": "references/nextjs_optimization_guide.md",
+              "start_line": 380,
+              "end_line": null,
+              "start_column": 32
+            }
+          ]
+        },
+        {
+          "id": "E1",
+          "finding_id": "finding-167f4a3ec3454fae8879544b3aa6d156",
+          "category": "Data Exfiltration",
+          "pattern": "External Transmission",
+          "severity": "MEDIUM",
+          "confidence": 0.5,
+          "location": {
+            "file": "references/nextjs_optimization_guide.md",
+            "start_line": 385,
+            "end_line": null,
+            "start_column": 32
+          },
+          "finding": "https://api.example.com/",
+          "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+          "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+          "code_snippet": "// Never include secrets in client code - use server-side API routes\n// app/api/data/route.ts\nexport async function GET() {\n  const response = await fetch('https://api.example.com/data', {\n    headers: {\n      'Authorization': `Bearer ${process.env.API_SECRET}`, // Server-side only\n    },",
+          "intent": null,
+          "tags": [
+            "Data Exfiltration"
+          ],
+          "evidence": {},
+          "match_fingerprint": "88f1946300c8ae45d5ea7e81f2b6d4309a13082e928b6f7d1215d273945a1431",
+          "occurrences": [
+            {
+              "file": "references/nextjs_optimization_guide.md",
+              "start_line": 385,
+              "end_line": null,
+              "start_column": 32
+            }
+          ]
+        },
+        {
+          "id": "E1",
+          "finding_id": "finding-eefe4234d184456ba4e975f21b3dadb4",
+          "category": "Data Exfiltration",
+          "pattern": "External Transmission",
+          "severity": "MEDIUM",
+          "confidence": 0.5,
+          "location": {
+            "file": "references/nextjs_optimization_guide.md",
+            "start_line": 610,
+            "end_line": null,
+            "start_column": 15
+          },
+          "finding": "https://analytics.example.com/",
+          "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+          "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+          "code_snippet": "\n        {/* Load analytics after page is interactive */}\n        <Script\n          src=\"https://analytics.example.com/script.js\"\n          strategy=\"afterInteractive\"\n        />\n",
+          "intent": null,
+          "tags": [
+            "Data Exfiltration"
+          ],
+          "evidence": {},
+          "match_fingerprint": "158f19bc58b7cf867e32b5d49ddb1e37e2d46c7cca0db2262704ebfc0fd6f78d",
+          "occurrences": [
+            {
+              "file": "references/nextjs_optimization_guide.md",
+              "start_line": 610,
+              "end_line": null,
+              "start_column": 15
+            }
+          ]
+        }
+      ],
+      "suppressed_count": 0,
+      "suppressed": [],
+      "metadata": {
+        "has_executable_scripts": true,
+        "skillspector_version": "2.11.2",
+        "llm_requested": true,
+        "llm_available": false,
+        "meta_analysis_applied": false,
+        "inference_usage": [],
+        "filtering_mode": "heuristic",
+        "llm_calls_attempted": 5,
+        "llm_calls_succeeded": 0,
+        "llm_degraded": true,
+        "llm_error": "LLM analysis was requested but 5 of 5 LLM call(s) failed; results reflect static analysis only for the affected batch(es). Reasons: TP4 LLM batch failed: OpenAIRateLimitError"
+      },
+      "analysis_completeness": {
+        "total_components": 7,
+        "scanned_components": 0,
+        "coverage_percent": 0.0,
+        "is_complete": false,
+        "status": "failed",
+        "execution_successful": false,
+        "fully_inspected_files": 0,
+        "partially_inspected_files": 7,
+        "entirely_uninspected_files": 0,
+        "ledger_exceptions": [
+          {
+            "outcome": "failed",
+            "phase": "meta",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "SKILL.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "meta_analyzer"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "SKILL.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "semantic_developer_intent",
+              "semantic_quality_policy",
+              "semantic_security_discovery"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "partial",
+            "phase": "semantic_runtime",
+            "reason_code": "semantic_runtime_incomplete",
+            "message": "Requested semantic analysis did not produce complete per-source runtime telemetry.",
+            "path": "SKILL.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": false
+          },
+          {
+            "outcome": "partial",
+            "phase": "reference_resolution",
+            "reason_code": "reference_missing",
+            "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+            "path": "SKILL.md",
+            "start_line": 11,
+            "end_line": 11,
+            "fatal": false
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "SKILL.md",
+            "start_line": 40,
+            "end_line": 40,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "SKILL.md",
+            "start_line": 46,
+            "end_line": 46,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "SKILL.md",
+            "start_line": 52,
+            "end_line": 52,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "SKILL.md",
+            "start_line": 57,
+            "end_line": 57,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "partial",
+            "phase": "reference_resolution",
+            "reason_code": "reference_missing",
+            "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+            "path": "SKILL.md",
+            "start_line": 80,
+            "end_line": 80,
+            "fatal": false
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "SKILL.md",
+            "start_line": 103,
+            "end_line": 103,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "SKILL.md",
+            "start_line": 109,
+            "end_line": 109,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "SKILL.md",
+            "start_line": 115,
+            "end_line": 115,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "SKILL.md",
+            "start_line": 120,
+            "end_line": 120,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "SKILL.md",
+            "start_line": 164,
+            "end_line": 164,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "SKILL.md",
+            "start_line": 184,
+            "end_line": 184,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "SKILL.md",
+            "start_line": 437,
+            "end_line": 446,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "partial",
+            "phase": "reference_resolution",
+            "reason_code": "reference_missing",
+            "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+            "path": "SKILL.md",
+            "start_line": 440,
+            "end_line": 440,
+            "fatal": false
+          },
+          {
+            "outcome": "failed",
+            "phase": "meta",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "references/frontend_best_practices.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "meta_analyzer"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "references/frontend_best_practices.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "semantic_developer_intent",
+              "semantic_quality_policy",
+              "semantic_security_discovery"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "references/frontend_best_practices.md",
+            "start_line": 350,
+            "end_line": 377,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "meta",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "references/nextjs_optimization_guide.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "meta_analyzer"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "references/nextjs_optimization_guide.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "semantic_developer_intent",
+              "semantic_quality_policy",
+              "semantic_security_discovery"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "references/nextjs_optimization_guide.md",
+            "start_line": 160,
+            "end_line": 181,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "references/nextjs_optimization_guide.md",
+            "start_line": 440,
+            "end_line": 453,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "references/nextjs_optimization_guide.md",
+            "start_line": 474,
+            "end_line": 486,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "references/nextjs_optimization_guide.md",
+            "start_line": 702,
+            "end_line": 723,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "references/react_patterns.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "semantic_developer_intent",
+              "semantic_quality_policy",
+              "semantic_security_discovery"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "partial",
+            "phase": "static",
+            "reason_code": "static_parse_limit",
+            "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+            "path": "references/react_patterns.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": false,
+            "analyzers": [
+              "static_patterns_tool_misuse"
+            ]
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "scripts/bundle_analyzer.py",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "semantic_developer_intent",
+              "semantic_quality_policy",
+              "semantic_security_discovery"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "scripts/bundle_analyzer.py",
+            "start_line": 1,
+            "end_line": 407,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "scripts/component_generator.py",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "semantic_developer_intent"
+            ],
+            "error_class": "OpenAIConnectionError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "scripts/component_generator.py",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "semantic_quality_policy",
+              "semantic_security_discovery"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "scripts/component_generator.py",
+            "start_line": 1,
+            "end_line": 329,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "meta",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "scripts/frontend_scaffolder.py",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "meta_analyzer"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "scripts/frontend_scaffolder.py",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "semantic_developer_intent",
+              "semantic_quality_policy",
+              "semantic_security_discovery"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "partial",
+            "phase": "static",
+            "reason_code": "static_parse_limit",
+            "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+            "path": "scripts/frontend_scaffolder.py",
+            "start_line": null,
+            "end_line": null,
+            "fatal": false,
+            "analyzers": [
+              "static_patterns_tool_misuse"
+            ]
+          },
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "scripts/frontend_scaffolder.py",
+            "start_line": 1,
+            "end_line": 1005,
+            "fatal": true,
+            "analyzers": [
+              "mcp_tool_poisoning"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          }
+        ],
+        "scope_exclusions": [],
+        "analyzer_statuses": [
+          {
+            "analyzer_id": "artifact_integrity",
+            "status": "completed",
+            "planned_work": 7,
+            "completed": 7,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "behavioral_ast",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "behavioral_taint_tracking",
+            "status": "completed",
+            "planned_work": 3,
+            "completed": 3,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "bundled_execution_surface",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "mcp_least_privilege",
+            "status": "completed",
+            "planned_work": 4,
+            "completed": 4,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "mcp_rug_pull",
+            "status": "completed",
+            "planned_work": 7,
+            "completed": 7,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "mcp_tool_poisoning",
+            "status": "failed",
+            "planned_work": 20,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 19,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "meta_analyzer",
+            "status": "failed",
+            "planned_work": 4,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 4,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "reference_coverage",
+            "status": "completed",
+            "planned_work": 14,
+            "completed": 14,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "semantic_developer_intent",
+            "status": "failed",
+            "planned_work": 7,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 7,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "semantic_quality_policy",
+            "status": "failed",
+            "planned_work": 7,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 7,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "semantic_security_discovery",
+            "status": "failed",
+            "planned_work": 7,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 7,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_agent_snooping",
+            "status": "completed",
+            "planned_work": 7,
+            "completed": 7,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_anti_refusal",
+            "status": "completed",
+            "planned_work": 7,
+            "completed": 7,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_data_exfiltration",
+            "status": "completed",
+            "planned_work": 7,
+            "completed": 7,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_deserialization",
+            "status": "completed",
+            "planned_work": 7,
+            "completed": 7,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_excessive_agency",
+            "status": "completed",
+            "planned_work": 7,
+            "completed": 7,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_harmful_content",
+            "status": "completed",
+            "planned_work": 7,
+            "completed": 7,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_memory_poisoning",
+            "status": "completed",
+            "planned_work": 7,
+            "completed": 7,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_output_handling",
+            "status": "completed",
+            "planned_work": 7,
+            "completed": 7,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_privilege_escalation",
+            "status": "completed",
+            "planned_work": 7,
+            "completed": 7,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_prompt_injection",
+            "status": "completed",
+            "planned_work": 7,
+            "completed": 7,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_rogue_agent",
+            "status": "completed",
+            "planned_work": 7,
+            "completed": 7,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_ssrf",
+            "status": "completed",
+            "planned_work": 7,
+            "completed": 7,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_supply_chain",
+            "status": "completed",
+            "planned_work": 7,
+            "completed": 7,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_system_prompt_leakage",
+            "status": "completed",
+            "planned_work": 7,
+            "completed": 7,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_tool_misuse",
+            "status": "degraded",
+            "planned_work": 7,
+            "completed": 5,
+            "partial": 2,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_yara",
+            "status": "completed",
+            "planned_work": 7,
+            "completed": 7,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          }
+        ],
+        "references": [
+          {
+            "source_path": "SKILL.md",
+            "line": 11,
+            "column": 83,
+            "evidence": "Frontend development patterns, performance optimization, and automation tools for React/Next.js applications.",
+            "target_path": null,
+            "status": "missing",
+            "disposition": "partial"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 22,
+            "column": 25,
+            "evidence": "- [Project Scaffolding](#project-scaffolding)",
+            "target_path": null,
+            "status": "rejected",
+            "disposition": "out_of_scope"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 23,
+            "column": 26,
+            "evidence": "- [Component Generation](#component-generation)",
+            "target_path": null,
+            "status": "rejected",
+            "disposition": "out_of_scope"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 24,
+            "column": 21,
+            "evidence": "- [Bundle Analysis](#bundle-analysis)",
+            "target_path": null,
+            "status": "rejected",
+            "disposition": "out_of_scope"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 25,
+            "column": 20,
+            "evidence": "- [React Patterns](#react-patterns)",
+            "target_path": null,
+            "status": "rejected",
+            "disposition": "out_of_scope"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 26,
+            "column": 26,
+            "evidence": "- [Next.js Optimization](#nextjs-optimization)",
+            "target_path": null,
+            "status": "rejected",
+            "disposition": "out_of_scope"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 27,
+            "column": 31,
+            "evidence": "- [Accessibility and Testing](#accessibility-and-testing)",
+            "target_path": null,
+            "status": "rejected",
+            "disposition": "out_of_scope"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 40,
+            "column": 11,
+            "evidence": "python scripts/frontend_scaffolder.py my-app --template nextjs",
+            "target_path": "scripts/frontend_scaffolder.py",
+            "status": "resolved",
+            "disposition": "analyzed"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 46,
+            "column": 11,
+            "evidence": "python scripts/frontend_scaffolder.py dashboard --template nextjs --features auth,api",
+            "target_path": "scripts/frontend_scaffolder.py",
+            "status": "resolved",
+            "disposition": "analyzed"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 80,
+            "column": 9,
+            "evidence": "\u2502 \u2514\u2500\u2500 api/health/route.ts",
+            "target_path": null,
+            "status": "missing",
+            "disposition": "partial"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 103,
+            "column": 11,
+            "evidence": "python scripts/component_generator.py Button --dir src/components/ui",
+            "target_path": "scripts/component_generator.py",
+            "status": "resolved",
+            "disposition": "analyzed"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 109,
+            "column": 11,
+            "evidence": "python scripts/component_generator.py ProductCard --type server",
+            "target_path": "scripts/component_generator.py",
+            "status": "resolved",
+            "disposition": "analyzed"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 115,
+            "column": 11,
+            "evidence": "python scripts/component_generator.py UserProfile --with-test --with-story",
+            "target_path": "scripts/component_generator.py",
+            "status": "resolved",
+            "disposition": "analyzed"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 120,
+            "column": 11,
+            "evidence": "python scripts/component_generator.py FormValidation --type hook",
+            "target_path": "scripts/component_generator.py",
+            "status": "resolved",
+            "disposition": "analyzed"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 164,
+            "column": 11,
+            "evidence": "python scripts/bundle_analyzer.py /path/to/project",
+            "target_path": "scripts/bundle_analyzer.py",
+            "status": "resolved",
+            "disposition": "analyzed"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 184,
+            "column": 11,
+            "evidence": "python scripts/bundle_analyzer.py . --verbose",
+            "target_path": "scripts/bundle_analyzer.py",
+            "status": "resolved",
+            "disposition": "analyzed"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 213,
+            "column": 13,
+            "evidence": "Reference: `references/react_patterns.md`",
+            "target_path": "references/react_patterns.md",
+            "status": "resolved",
+            "disposition": "analyzed"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 295,
+            "column": 13,
+            "evidence": "Reference: `references/nextjs_optimization_guide.md`",
+            "target_path": "references/nextjs_optimization_guide.md",
+            "status": "resolved",
+            "disposition": "analyzed"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 379,
+            "column": 13,
+            "evidence": "Reference: `references/frontend_best_practices.md`",
+            "target_path": "references/frontend_best_practices.md",
+            "status": "resolved",
+            "disposition": "analyzed"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 440,
+            "column": 35,
+            "evidence": "remotePatterns: [{ hostname: \"cdn.example.com\" }],",
+            "target_path": null,
+            "status": "missing",
+            "disposition": "partial"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 488,
+            "column": 20,
+            "evidence": "- React Patterns: `references/react_patterns.md`",
+            "target_path": "references/react_patterns.md",
+            "status": "resolved",
+            "disposition": "analyzed"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 489,
+            "column": 26,
+            "evidence": "- Next.js Optimization: `references/nextjs_optimization_guide.md`",
+            "target_path": "references/nextjs_optimization_guide.md",
+            "status": "resolved",
+            "disposition": "analyzed"
+          },
+          {
+            "source_path": "SKILL.md",
+            "line": 490,
+            "column": 20,
+            "evidence": "- Best Practices: `references/frontend_best_practices.md`",
+            "target_path": "references/frontend_best_practices.md",
+            "status": "resolved",
+            "disposition": "analyzed"
+          }
+        ],
+        "limitations": [
+          "Analyzer mcp_tool_poisoning status: failed.",
+          "Analyzer semantic_developer_intent status: failed.",
+          "Analyzer semantic_quality_policy status: failed.",
+          "Analyzer semantic_security_discovery status: failed.",
+          "Analyzer static_patterns_tool_misuse status: degraded.",
+          "Analyzer meta_analyzer status: failed."
+        ],
+        "findings_before_filtering": 24,
+        "findings_after_filtering": 24
+      }
+    },
+    {
+      "name": "seo-audit",
+      "path": "seo-audit",
+      "risk_score": 0,
+      "risk_severity": "LOW",
+      "finding_count": 0,
+      "execution_successful": false,
+      "transitive_finding_count": 0,
+      "transitive_sources": [],
+      "skill": {
+        "name": "seo-audit",
+        "source": "C:\\Users\\App Jun Fro Dev SAU\\.gemini\\config\\plugins\\denycode-plugin\\skillspector-reports\\20261001-114632\\_staging\\batch-010\\seo-audit",
+        "scanned_at": "2026-10-01T04:50:25.740034+00:00"
+      },
+      "risk_assessment": {
+        "score": 0,
+        "severity": "LOW",
+        "recommendation": "CAUTION",
+        "max_issue_severity": "NONE"
+      },
+      "components": [
+        {
+          "path": "SKILL.md",
+          "type": "markdown",
+          "lines": 487,
+          "executable": false,
+          "size_bytes": 12462,
+          "source_url": null,
+          "source_identity": null,
+          "source_digest": null
+        }
+      ],
+      "structured_summaries": [],
+      "issues": [],
+      "suppressed_count": 0,
+      "suppressed": [],
+      "metadata": {
+        "has_executable_scripts": false,
+        "skillspector_version": "2.11.2",
+        "llm_requested": true,
+        "llm_available": true,
+        "meta_analysis_applied": false,
+        "inference_usage": [],
+        "filtering_mode": "heuristic",
+        "llm_calls_attempted": 3,
+        "llm_calls_succeeded": 0,
+        "llm_degraded": true,
+        "llm_error": "LLM analysis was requested but 3 of 3 LLM call(s) failed; results reflect static analysis only for the affected batch(es)."
+      },
+      "analysis_completeness": {
+        "total_components": 1,
+        "scanned_components": 0,
+        "coverage_percent": 0.0,
+        "is_complete": false,
+        "status": "failed",
+        "execution_successful": false,
+        "fully_inspected_files": 0,
+        "partially_inspected_files": 1,
+        "entirely_uninspected_files": 0,
+        "ledger_exceptions": [
+          {
+            "outcome": "failed",
+            "phase": "semantic",
+            "reason_code": "llm_batch_failed",
+            "message": "LLM analysis failed for this file range.",
+            "path": "SKILL.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": true,
+            "analyzers": [
+              "semantic_developer_intent",
+              "semantic_quality_policy",
+              "semantic_security_discovery"
+            ],
+            "error_class": "OpenAIRateLimitError"
+          },
+          {
+            "outcome": "partial",
+            "phase": "semantic_runtime",
+            "reason_code": "semantic_runtime_incomplete",
+            "message": "Requested semantic analysis did not produce complete per-source runtime telemetry.",
+            "path": "SKILL.md",
+            "start_line": null,
+            "end_line": null,
+            "fatal": false
+          }
+        ],
+        "scope_exclusions": [],
+        "analyzer_statuses": [
+          {
+            "analyzer_id": "artifact_integrity",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "behavioral_ast",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "behavioral_taint_tracking",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "bundled_execution_surface",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "mcp_least_privilege",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "mcp_rug_pull",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "mcp_tool_poisoning",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "meta_analyzer",
+            "status": "not_applicable",
+            "planned_work": 0,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0,
+            "reason_code": "no_applicable_files",
+            "message": "No files matched this analyzer's applicability contract."
+          },
+          {
+            "analyzer_id": "semantic_developer_intent",
+            "status": "failed",
+            "planned_work": 1,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 1,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "semantic_quality_policy",
+            "status": "failed",
+            "planned_work": 1,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 1,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "semantic_security_discovery",
+            "status": "failed",
+            "planned_work": 1,
+            "completed": 0,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 1,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_agent_snooping",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_anti_refusal",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_data_exfiltration",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_deserialization",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_excessive_agency",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_harmful_content",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_memory_poisoning",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_output_handling",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_privilege_escalation",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_prompt_injection",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_rogue_agent",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_ssrf",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_supply_chain",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_system_prompt_leakage",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_patterns_tool_misuse",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          },
+          {
+            "analyzer_id": "static_yara",
+            "status": "completed",
+            "planned_work": 1,
+            "completed": 1,
+            "partial": 0,
+            "skipped": 0,
+            "failed": 0,
+            "unaccounted": 0
+          }
+        ],
+        "references": [],
+        "limitations": [
+          "Analyzer semantic_developer_intent status: failed.",
+          "Analyzer semantic_quality_policy status: failed.",
+          "Analyzer semantic_security_discovery status: failed."
+        ],
+        "findings_before_filtering": 0,
+        "findings_after_filtering": 0
+      }
+    }
+  ]
+}
